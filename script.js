@@ -1,5 +1,21 @@
 const apiKey = 'cba37f4300a91711f5c5987d9ac29b62'; // Remplacez par votre clé API Mediastack
 const newsContainer = document.querySelector('main');
+const express = require('express');
+const fetch = require('node-fetch');
+const app = express();
+const PORT = 3000;
+
+app.get('/api/news', async (req, res) => {
+    try {
+        const response = await fetch(`http://api.mediastack.com/v1/news?access_key=cba37f4300a91711f5c5987d9ac29b62&languages=fr&limit=10`);
+        const data = await response.json();
+        res.json(data);
+    } catch (err) {
+        res.status(500).send('Erreur lors de la récupération des données');
+    }
+});
+
+app.listen(PORT, () => console.log(`Serveur en cours d'exécution sur http://localhost:${PORT}`));
 
 // Fonction pour charger les articles depuis Mediastack
 async function loadArticles() {
