@@ -3,8 +3,8 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: white;
+    color: black;
     line-height: 1.6;
 }
 
@@ -32,6 +32,11 @@ main {
     opacity: 0; /* Invisible avant l'animation */
 }
 
+h1 {
+    font-size: 2rem; /* Ajustez la taille selon vos besoins */
+    text-align: center;
+}
+
 /* Ajout de flou sur l'image de fond */
 .article::before {
     content: '';
@@ -53,6 +58,37 @@ main {
     color: white;
     padding: 20px;
     border-radius: 10px;
+}
+
+/* Container de chargement */
+#loading {
+    display: none; /* Masqué par défaut */
+    text-align: center;
+    margin-top: 100px;
+}
+
+/* Style du texte */
+.loading-text {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Spinner de chargement */
+.spinner {
+    margin: 0 auto;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+/* Animation de rotation du spinner */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 .article h2 {
