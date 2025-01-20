@@ -3,8 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="ÉclairNews">
+    <meta property="og:description" content="Toutes les actualités a travers le monde !">
+    <meta property="og:image" content="./preview.webp">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:image:width" content="1792">
+    <meta property="og:image:height" content="1024">
     <title>ÉclairNews</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/webp" href="favicon.webp">
 </head>
 <body>
     <header>
@@ -12,11 +19,15 @@
     </header>
 
     <main>
+        <div id="loading">
+        <div class="spinner"></div>
+        <div class="loading-text">Chargement des articles...</div>
+        </div>
         <!-- Les articles seront insérés ici -->
     </main>
 
     <footer>
-        <p>&copy; 2025 MonSiteActu. Tous droits réservés.</p>
+        <p>&copy; 2025 ÉclairNews. Tous droits réservés.</p>
     </footer>
 
     <script src="script.js"></script>
