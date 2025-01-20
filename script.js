@@ -3,6 +3,9 @@ const newsContainer = document.querySelector('main');
 
 // Fonction pour charger les articles depuis Mediastack
 async function loadArticles() {
+        // Afficher l'animation de chargement
+    const loadingElement = document.getElementById('loading');
+    loadingElement.style.display = 'block'; // Affiche l'animation
     try {
         // API Mediastack : récupérer les 10 dernières actualités en français
         const response = await fetch(`http://api.mediastack.com/v1/news?access_key=${apiKey}&languages=fr&limit=10`);
